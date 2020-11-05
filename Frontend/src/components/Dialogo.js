@@ -84,7 +84,6 @@ export default function FormDialog(props) {
             <br></br>
             <input
               required
-              accept="image/*"
               style = {{display: 'none', width: '100%'}}
               id="contained-button-file"
               multiple

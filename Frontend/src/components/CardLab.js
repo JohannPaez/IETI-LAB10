@@ -33,14 +33,40 @@ export default function CardLab (props) {
         {"key": "Email", "value": props.email}, 
         {"key": "Status", "value": props.status}, 
         {"key": "Duedate", "value": props.dueDate}];
+
+    const extensiones = ["xbm", "tif", "pjp", "svgz", "jpg", "jpeg", "ico", "tiff", "gif", "svg", "jfif", "webp", "png", "bmp", "pjpeg", "avif"];
+    
+    const verifyExtention = (fileUrl) => {
+        let ext = "";
+        for (var i = fileUrl.length - 1; i >= 0; i--) {
+            if (fileUrl[i] == ".") {
+                ext = fileUrl.substring(i + 1, fileUrl.length);
+                break;
+            }
+        }
+        if (extensiones.includes(ext)) return true;
+        return false;
+    }
+
+    const iconFile = (fileUrl) => {
+        return (
+            <div className={classes.contenido} style = {{fontFamily: "'Roboto Slab', 'serif'"}}> 
+                <br></br>
+                Click the icon to view and download the file
+                <br></br><br></br>
+                <DescriptionIcon style = {{fontSize: '50px'}} onClick = {()=>  window.location.href = fileUrl}/>
+            </div>
+        );
+    }
+
     
     return (
         <Card className={classes.root}>
             <CardActionArea>
-            {props.fileUrl ? <CardMedia
+            {verifyExtention(props.fileUrl) ? <CardMedia
                 className={classes.media}
                 image={props.fileUrl}
-            /> : <div/>}
+            /> : iconFile(props.fileUrl)}
             <CardContent className={classes.contenido} style = {{fontFamily: "'Roboto Slab', 'serif'"}}>
                     {myList.map((item) =>
                             <div key = {item.key + "_" + item.value}>                                 
