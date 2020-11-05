@@ -1,6 +1,41 @@
+# IETI-LAB10
+
+## Este proyecto fue construido con:
+
+- [Gradle](https://gradle.org/) Administrador de dependencias.
+
+- [Spring](https://spring.io/) Framework para desarrollar aplicaciones web.
+
+- [ReactJS](https://es.reactjs.org/) Framework para aplicaciones web.
+
+## Comandos Backend
+  Para compilar el proyecto: ```gradle build```
+  
+  Para ejecutar el proyecto: ```gradle bootRun```  
+      
+## Comandos Frontend
+  Para descargar las dependencias: ```npm install```
+  
+  Para ejecutar la aplicación: ```npm start```  
+  
+  **IMPORTANTE:** Para poder utilizar el aplicativo es necesario instalar las dependencias primero con el comando **npm install**.
+  
+## Datos de Logeo
+
+**Correo**: test@mail.com
+
+**Contraseña**: password
+
+**Nota**: Se deben utilizar estos datos de logeo, ya que la función de registro aún no está disponible.
+
+## Enunciado
+El enunciado del laboratorio está disponible [aquí](https://github.com/ieti-eci/2.4-mongodb-file-api).
+
+## Autor
+Johann Sebastian Páez Campos - Laboratorio 10 IETI 05/11/2020
+
 # 2.4 MongoDB Files API
 Create Spring Boot API that allows uploading and serving files.
-
 
 ## Part 1: Implement a File uploader API
 
